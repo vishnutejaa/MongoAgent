@@ -2,10 +2,11 @@ from pymongo import MongoClient
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 import os
+load_dotenv()
 
 
 # Replace the placeholder with your EC2 instance's public IP address or domain name
-ec2_instance_ip = ''
+# ec2_instance_ip =os.getenv('')
 
 port = 27017  # Default MongoDB port
 mongo_url = f"mongodb://{ec2_instance_ip}:{port}/"
@@ -54,7 +55,7 @@ prompt_template = ChatPromptTemplate.from_template(
 )
 
 # Set up the OpenAI client
-# openai_api_key = ''
+# openai_api_key = os.getenv('')
 
 # Initialize OpenAI with the GPT-4 model
 llm = ChatOpenAI(
