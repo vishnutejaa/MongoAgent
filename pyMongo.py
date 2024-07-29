@@ -6,7 +6,7 @@ load_dotenv()
 
 
 # Replace the placeholder with your EC2 instance's public IP address or domain name
-# ec2_instance_ip =os.getenv('')
+ec2_instance_ip =os.getenv('AWS_KEY')
 
 port = 27017  # Default MongoDB port
 mongo_url = f"mongodb://{ec2_instance_ip}:{port}/"
@@ -55,7 +55,7 @@ prompt_template = ChatPromptTemplate.from_template(
 )
 
 # Set up the OpenAI client
-# openai_api_key = os.getenv('')
+openai_api_key = os.getenv('OPEN_AI_API_KEY')
 
 # Initialize OpenAI with the GPT-4 model
 llm = ChatOpenAI(
