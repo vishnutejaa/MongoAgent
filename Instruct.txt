@@ -6,4 +6,7 @@ Command to check the AWS Key file:
 Run and connect to AWS EC2 instance using the key file name .pem
     ssh -i "name.pem" ec2-user@/AWS address or IP as provided for your instance/(remove '/')
 
+TO ignore the .env for git push
+    run:  echo ".env" >> .gitignore or unstage .env if being tracked by git used git rm --cached .env (This ensures to remove the file from being tracked and also leaves it untouched locally )
+   
 
