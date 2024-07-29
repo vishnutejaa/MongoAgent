@@ -1,0 +1,9 @@
+///// Few command used to run the application and to setup env requirements necessary
+
+Command to check the AWS Key file: 
+    chmod 400 "name.pem"
+
+Run and connect to AWS EC2 instance using the key file name .pem
+    ssh -i "name.pem" ec2-user@/AWS address or IP as provided for your instance/(remove '/')
+
+
